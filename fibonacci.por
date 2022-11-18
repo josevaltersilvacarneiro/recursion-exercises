@@ -21,9 +21,11 @@ programa
 	{	
 		se (posicao == 1 ou posicao == 2)
 		{
+			// Base
 			retorne 1
 		}
 
+		// Recursão
 		retorne fibonacci(posicao - 1) + fibonacci(posicao - 2)
 	}
 }
@@ -33,7 +35,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 492; 
+ * @POSICAO-CURSOR = 540; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
