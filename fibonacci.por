@@ -1,47 +1,30 @@
 programa
 {
-	inteiro numero_anterior = 1
-	inteiro numero = 1
-	 
 	funcao inicio()
 	{	
-		inteiro vezes
+		inteiro posicao, numero_posicao
 		
 		escreva("****************************************************\n")
 		escreva("* Encontrando o elemento na sequência de Fibonacci *\n")
 		escreva("****************************************************\n")
 
 		escreva("Digite o número: ")
-		leia(vezes)
+		leia(posicao)
 
-		se (vezes == 1 ou vezes == 2)
-		{
-			escreva("Valor 1\n")
-		}
-		senao
-		{
-			vezes = fibonacci(vezes - 2)
+		numero_posicao = fibonacci(posicao)
 			
-			escreva("Valor ", vezes, "\n")
-		}
+		escreva("Valor ", numero_posicao, "\n")
+
 	}
 
-	funcao inteiro fibonacci(inteiro quantidade_vezes)
-	{
-		inteiro auxiliar
-		
-		auxiliar = numero_anterior
-		numero_anterior = numero
-		numero = numero + auxiliar
-
-		quantidade_vezes -= 1
-
-		se (quantidade_vezes > 0)
+	funcao inteiro fibonacci(inteiro posicao)
+	{	
+		se (posicao == 1 ou posicao == 2)
 		{
-			retorne fibonacci(quantidade_vezes)
+			retorne 1
 		}
 
-		retorne numero
+		retorne fibonacci(posicao - 1) + fibonacci(posicao - 2)
 	}
 }
 
@@ -50,7 +33,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 562; 
+ * @POSICAO-CURSOR = 492; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
